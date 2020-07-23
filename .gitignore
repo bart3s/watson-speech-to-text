@@ -1,0 +1,11 @@
+dist/
+*-logs/
+*.csv
+node_modules/
+*.tgz
+*.zip
+*.wav
+*.mp3
+*.ogg
+.env
+data/
