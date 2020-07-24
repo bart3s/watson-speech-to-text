@@ -32,10 +32,12 @@ async function go() {
             let output: any = await axios.post(url, data, config)
             let transcript = output.data.results[0].alternatives[0].transcript
             transcripts.push({transcript:`${transcript.trim()}.`, filename})
+            console.log(`🟢 ${filename}`)
         } catch(ex) {
             let transcript = ""
             failedTranscripts.push({transcript: `${transcript}.`, filename})
-            console.log(ex)
+            // console.log(ex)
+            console.error(`🔴 ${filename}`)
         }
     }
 
